@@ -1,0 +1,456 @@
+/* Body med fjernet standard margin i kanterne og overflow for at undgå horizontalt scroll */
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: montserrat;
+}
+
+/* hr seperator til at opdele sektioner med hvid luft. Standard margin i top og bund er fjernet og styres i height */
+.separator {
+    background-color: #fff;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    height: 10px;
+    width: 100%;
+    border: none;
+}
+
+/* Container class definerer luften indhold og ud til kanten af section */
+.container {
+    padding: 30px;
+}
+
+/* Større luft ved skærmbredde 768px eller bredere */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 60px;
+    }
+}
+
+/* Light section til at definere farver og standard elementer i lysegrønne sektioner */
+.light-section {
+    background-color: #A4C8AB;
+}
+
+/* Dark section til at definere farver og standard elementer i mørkegrønne sektioner */
+.dark-section {
+    background-color: #02776D;
+}
+
+/* Styling til H1/Titel tags */
+.h1 {
+    font-size: 65px;
+    color: #FCFD93;
+    font-family: "montserrat";
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+/* Styling til H2/Undertitel tags */
+.h2 {
+    font-size: 36px;
+    color: #02776D;
+    font-family: "montserrat";
+    margin-block-end: 0;
+    margin-block-start: 0;
+    text-align: center;
+}
+
+.h3 {
+    font-size: 36px;
+    color: #FCFD93;
+    font-family: "montserrat";
+    text-align: center;
+}
+
+.h4 {
+    font-size: 24px;
+    color: #73B889;
+    font-family: "montserrat";
+}
+
+.h5 {
+    font-size: 24px;
+    color: #02776D;
+    font-family: "montserrat";
+}
+
+/* Styling til header */
+header {
+    display: flex;
+    justify-content: space-between; /* Placer logo og navigation på hver sin side */
+    align-items: center;
+    background-color: #356a63;
+    padding: 20px 50px; /* Tilføj lidt luft omkring indholdet */
+    color: #FCFD93;
+}
+  
+.logo img {
+    max-height: 60px;
+}
+  
+/* Navigation */
+nav ul {
+    display: flex; /* Placer navigationselementer på én linje */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 50px; /* Afstand mellem links */
+}
+
+nav a {
+    text-decoration: none;
+    color: #f5e99d;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+main section {
+    padding: 100px 50px;
+    border-bottom: 1px solid #ccc;
+}
+  
+main section h1 {
+    margin-top: 0;
+}
+
+/* Class til at give elementer runde hjørner */
+.rounded {
+    border-radius: 30px;
+    border: 5px solid #60A5FA;
+}
+
+/* Hero section på forside styling */
+.hero-with-image {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero section på forside titel elementer placering */
+.hero-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Billede i hero section på forside */
+.hero-image {
+    object-fit: cover;
+    object-position: -70px;
+}
+
+/* Hero section på forside styling ved større skærmbredde */
+@media screen and (min-width: 768px) {
+    .hero-with-image {
+        flex-direction: row-reverse;
+        gap: 60px;
+    }
+}
+
+.om-mig-image-titles {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.om-mig-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.om-mig-image {
+    object-fit: cover;
+}
+
+.projekter-image-video-titles {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.projekter-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.projekter-image {
+    object-fit: cover;
+}
+
+.logo-image-1-with-text-hover {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Centrerer billederne vandret */
+    align-items: center; /* Centrerer billederne lodret */
+    gap: 20px; /* Mellemrum mellem billederne */
+    margin: 20px 0;
+  }
+
+.logo-image-1-with-text-hover img {
+    width: 100%; /* Juster bredden af billeder */
+    height: 100%; /* Bevarer proportionerne */
+    border-radius: 30px;
+}
+
+.logo-image-2-with-text-hover {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    margin: 20px 0;
+  }
+
+.logo-image-2-with-text-hover img {
+    width: 100%; 
+    height: 100%; 
+    border-radius: 30px;
+  }
+
+.Projekter-video-with-text-hover {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    margin: 20px 0;
+}
+
+.Projekter-video-with-text-hover video {
+    width: 500px; 
+    height: 500px; 
+    border-radius: 10px; 
+    border: 5px solid #60A5FA;
+}
+
+.Projekter-image-with-text-hover {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Centrerer billederne vandret */
+    align-items: center; /* Centrerer billederne lodret */
+    gap: 20px; /* Mellemrum mellem billederne */
+    margin: 20px 0;
+}
+
+.Projekter-image-with-text-hover img {
+    border-radius: 10px; /* Afrundede hjørner */
+    border: 5px solid #60A5FA;
+}
+
+/* Container som indeholder billede med tekst som vises ved hover */
+.image-with-text-hover {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+.logo-image-1-with-text-hover .image-with-text-hover, .logo-image-2-with-text-hover .image-with-text-hover {
+    width: 300px;
+    height: 300px;
+}
+
+/* Billede som placeres bagved tekst ved hover eller klik */
+.image-hover {
+    object-fit: cover;
+}
+
+/* Tekst element som er gennemsigtigt indtil man holder musen over eller klikker på containeren */
+.show-on-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #A4C8AB;
+    color: #fff;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+.show-on-hover.rounded {
+    padding: 20px;
+}
+
+/* Ved at hover eller klikke container gør vi tekst synlig */
+.image-with-text-hover:hover .show-on-hover, .image-with-text-hover:active .show-on-hover  {
+    opacity: 1;
+}
+
+.Kontaktfomular {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+.Kontaktfomular {
+    background-color: #FCFD93; /* Lysegul baggrund */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Let skygge */
+    max-width: 600px;
+    margin: 0 auto;
+    color: #02776D;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+  /* Inputfelter, textarea og knap */
+.Kontaktfomular input,
+.Kontaktfomular textarea,
+.Kontaktfomular button {
+    width: 100%; /* Ens bredde */
+    margin: 10px auto; /* Ens afstand mellem felterne */
+    padding: 10px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    display: block; /* Gør elementerne centrerede */
+    box-sizing: border-box; /* Inkluder padding i bredden */
+}
+  
+.Kontaktfomular input,
+.Kontaktfomular textarea {
+    border: 2px solid #60A5FA; /* Lyseblå kant */
+    background-color: #FFFFE5; /* Lys gul baggrund */
+}
+  
+.Kontaktfomulartextarea {
+    height: 100px; /* Tekstfeltets højde */
+    resize: none; /* Forhindrer brugeren i at ændre størrelsen */
+}
+  
+.Kontaktfomular button {
+    background-color: #02776D; /* Mørkegrøn knap */
+    color: #FCFD93; /* Gul tekst */
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Blød hover-effekt */
+}
+  
+.Kontaktfomular button:hover {
+    background-color: #2B4036; /* Mørkere grøn ved hover */
+}
+  
+  /* Tilpasset til mindre skærme */
+@media (max-width: 600px) {
+    .contact-form {
+      padding: 20px;
+    }
+}
+
+/* Styling til footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A4C8AB;
+    color: #02776D;
+    padding: 20px 50px;
+}
+
+.footer h3 {
+    color: #02776D;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer a {
+    color: #02776D;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .social-media a {
+    margin: 5px 0;
+}
+
+.social-media-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .contact p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.Animation-Workshop {
+    height: 500px;
+    width: 500px;
+}
+
+.MovingArt {
+    height: 500px;
+    width: 500px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .om-mig-image-titles {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-image-1-with-text-hover {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-image-2-with-text-hover {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .projekter-image-video-titles {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
